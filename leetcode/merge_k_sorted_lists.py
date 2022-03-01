@@ -13,7 +13,8 @@ def solution(lists: List[Optional[ListNode]]) -> Optional[ListNode]:
     root = result = ListNode()
 
     for i, v in enumerate(lists):
-        heapq.heappush(heap, (v.val, i, v))
+        if v:
+            heapq.heappush(heap, (v.val, i, v))
 
     while heap:
         node = heapq.heappop(heap)
