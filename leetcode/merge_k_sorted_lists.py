@@ -24,6 +24,6 @@ def solution(lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         if result.next:
             heapq.heappush(heap, (result.next.val, idx, result.next))
 
-    return root.enxt
+    return root.next
 
 
